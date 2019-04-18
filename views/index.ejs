@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="al:ios:url" content="status-im:/<%= path %>" />
+    <meta property="al:ios:app_store_id" content="1178893006" />
+    <meta property="al:ios:app_name" content="Status — Ethereum. Anywhere" />
+
+    <meta property="al:android:url" content="status-im:/<%= path %>" />
+    <meta property="al:android:package" content="im.status.ethereum" />
+    <meta property="al:android:app_name" content="Status — Ethereum. Anywhere" />
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="https://status.im">
+        <img src="/images/status-logo.svg" />
+      </a>
+    </header>
+    <div class="try-it-now">
+      <a class='app-store-link' href='#'>
+        Download Status!
+      </a>
+    </div>
+    <div class="content">
+      <img class="banner" src="/images/status-logo-symbol.svg">
+      <h2><%= title %></h2>
+      <%if (locals.qrCodeDataUri) { %>
+        <img class="qr-code" src="<%= qrCodeDataUri %>" />
+      <% } %>
+      <a class="open-link button" href="status-im:/<%= path %>">
+        Open in Status
+      </a>
+    </div>
+    <footer class="footer">
+      <a class="privacy-policy" href="https://status.im/privacy-policy.html" target="_blank">
+        Privacy Policy
+      </a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='/javascripts/app.js'></script>
+  </body>
+</html>
